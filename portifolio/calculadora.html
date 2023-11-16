@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+        font-family: 'Arial', coursive;
+    }
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    input{
+        font-size: 20px;
+        margin-left: 35%;
+        margin-top: 10px;
+        width: 29.7%;
+        height: 40px;
+        text-align: center;
+        border-radius: 6px;
+        border: none;
+    }
+    select{
+        font-size: 20px;
+        margin-left: 35%;
+        margin-top: 10px;
+        width: 30%;
+        height: 40px;
+        text-align: center;
+        border: none;
+        border-radius: 6px;
+    }
+    button{
+        font-size: 20px;
+        margin-left: 35%;
+        margin-top: 10px;
+        width: 30%;
+        height: 40px;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 6px;
+    
+    }
+    
+    button:hover {
+        background-color: gray;
+        color: white;
+        border: 1px solid rgb(251, 0, 84);
+    }
+    p{
+        font-size: 20px;
+        margin-left: 35%;
+        margin-top: 10px;
+        width: 30%;
+        height: 40px;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 6px;
+        text-align: center;    
+    }
+</style>
+<body>
+    <h1>Utilizando JavaScript</h1>
+    <h2>Calculadora</h2>
+    <select id="tipo">
+        <option value="+">Soma</option>
+        <option value="-">Subtração</option>
+        <option value="x">Multiplicação</option>
+        <option value="/">Divisão</option>
+    </select><br>
+    <input id="n1" type="number"> <br>
+    <input id="n2" type="number"><br>
+    <button onclick="calcular()">Calcular</button>
+    <p id="res"></p>
+    
+    
+
+
+    <script>
+        function calcular() {
+            var tipo = document.getElementById('tipo').value;
+            var n1 = Number(document.getElementById('n1').value);
+            var n2 = Number(document.getElementById('n2').value);
+            var res;
+            if (tipo == '+') {
+                res = n1 + n2;
+            } else if (tipo == '-') {
+                res = n1 - n2;
+            } else if (tipo == 'x') {
+                res = n1 * n2;
+            } else if (tipo == '/') {
+                res = n1 / n2;
+            } else {
+                res = 'Digite um número válido';
+            }
+            document.getElementById('res').innerHTML = n1 + tipo + n2 + ' = ' + res;        }
+    </script>
+</body>
+</html>
