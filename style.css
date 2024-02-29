@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Kode Mono', monospace;
     margin: 0;
     padding: 0;
 }
@@ -29,31 +30,43 @@ header h1{
     color: #333;
 }
 
-
-.skill-category h3 {
-    color: #555;
+.skill-category h3{
+    text-align: center;
+    font-size: 4vh;
+    color: #ffffff;
+    margin-top: 5vh;
+    font-family: 'Kode Mono', monospace;
 }
 
 .skill-category{
     justify-content: space-between;
-    margin-bottom: 20px;
+}
+#languages img{
+    width: 10%;
+    height: auto;
+    /* margin-top: -7vh; */
 }
 #skills-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
-    margin-bottom: 20px;
     text-align: center;
+    height: 25vh;
 }
 #skills{
-    background-color: #000000b4;
+    background-color: #557a7c;
     border: none;
+    color: aliceblue;
+    margin-top: 10vh;
     }
 
 #skills h2{
-    margin-top: 10vh;
-    position: relative;
-    text-align: center;}
+    text-align: center;
+    color: #bca0ff;
+    padding-top: 5vh;
+    font-size: 3vh;
+}
+
 
 #profile-picture img{
     border-radius: 50%;
