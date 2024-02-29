@@ -2,117 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adiciona a meta tag viewport -->
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <title>Portifólio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinicius Werner</title>
 </head>
 
 <body>
-    <div class="principal">
-        <h1>Vinicius<br> Werner</h1>
-        <p>Front-End Developer</p>
-        
-        <div>
-            <div class="card">
-                <div class="card-content">
-                    <a href="#">
-                        <h2>Bio</h2>
-                    </a>
-                    <div class="jobs">
-                        <h2 id="jobs-title">Jobs</h2>
-                        <div id="jobs-options" class="jobs-options">
-                            <a href="calculadora.html"><p class="job-option">Calculadora Js</p></a>
-                            <a href="geradorSenha.py"><p class="job-option">Gerador de Senha</p></div></a>
-                        </div>
-                    </div>
-                
-                    <script>
-                        const jobsTitle = document.getElementById('jobs-title');
-                        const jobsOptions = document.getElementById('jobs-options');
-                        const jobOptions = document.querySelectorAll('.job-option');
-                
-                        function handleClick(event) {
-                            const isClickInsideJobs = jobsTitle.contains(event.target) || jobsOptions.contains(event.target);
-                            if (!isClickInsideJobs) {
-                                jobsOptions.classList.remove('visible');
-                                jobOptions.forEach(option => {
-                                    option.classList.remove('visible');
-                                });
-                            }
-                        }
-                
-                        document.addEventListener('click', handleClick);
-                
-                        jobsTitle.addEventListener('click', (event) => {
-                            event.stopPropagation();
-                            jobsOptions.classList.toggle('visible');
-                
-                            if (jobsOptions.classList.contains('visible')) {
-                                jobOptions.forEach(option => {
-                                    option.classList.add('visible');
-                                });
-                            } else {
-                                jobOptions.forEach(option => {
-                                    option.classList.remove('visible');
-                                });
-                            }
-                        });
-                    </script>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="skill-box">
-              <span class="title">HTML5</span>
-          
-              <div class="skill-bar">
-                <span class="skill-per html">
-                  <span class="tooltip">100%</span>
-                </span>
-              </div>
-            </div>
-          
-            <div class="skill-box">
-              <span class="title">CSS3</span>
-          
-              <div class="skill-bar">
-                <span class="skill-per scss">
-                  <span class="tooltip">90%</span>
-                </span>
-              </div>
-            </div>
-            <div class="skill-box">
-              <span class="title">Boostrap</span>
-          
-              <div class="skill-bar">
-                <span class="skill-per Boostrap">
-                  <span class="tooltip">50%</span>
-                </span>
-              </div>
-            </div>
-            <div class="skill-box">
-                <span class="title">JavaScript</span>
-                <div class="skill-bar">
-                  <span class="skill-per Javascript">
-                    <span class="tooltip">70%</span>
-                  </span>
-                </div>
-              </div>
-              <div class="skill-box">
-                <span class="title">Python</span>
-                <div class="skill-bar">
-                  <span class="skill-per Python">
-                    <span class="tooltip">70%</span>
-                  </span>
-                </div>
-              </div>
-          </div>
-          
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <title>Vinicius Werner - Portfólio</title>
+  </head>
+
+  <body>
+    <header id="site-header">
+      <div id="profile-picture"><img src="vwerner.jpg"></div>
+      <div id="profile-name">
+        <h1>Vinicius Werner</h1>
+        <p>Desenvolvedor Web Full Stack</p>
+      </div>
+    </header>
+    <div id="sobremim">
+      <h2>Sobre Mim</h2>
     </div>
+    <section id="about">
+      <div id="circle-profile">
+        <h1>Engenheiro de<br> Software</h1>
+        <h2>2024 - 2029</h2>
+        <img src="univille.png">
+      </div>
+      <div id="circle-profile">
+        <h1>Desenvolvedor de<br> Sistemas</h1>
+        <h2>2021 - 2023</h2>
+        <img src="senai.png">
+      </div>
+      <div id="circle-profile">
+        <h1>Desenvolvedor <br>Web Junior</h1>
+        <h2>2024</h2>
+        <img src="orbenk.png">
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Habilidades</h2>
+      <div id="skills-container">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <p>HTML5, CSS3, JavaScript (ES6+)<br>Frameworks: React<br>Design responsivo e acessibilidade</p>
+        </div>
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <p>Node.js<br>Banco de Dados: MySQL<br>APIs</p>
+        </div>
+        <div class="skill-category">
+          <h3>Ferramentas e Outras Habilidades</h3>
+          <p>Controle de Versão: Git, GitHub</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+  <script src="script.js"></script>
+
+  </html>
+
 </body>
 
 </html>
