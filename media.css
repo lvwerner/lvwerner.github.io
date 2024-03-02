@@ -42,4 +42,12 @@
       width: 50%;
       margin-left: 24%;
     }
+    #skills{
+      height:50vh;
+    }
+    #languages img{
+      width: 20%;
+      height: auto;
+      margin-bottom: 10vh;
+    }
 }

@@ -5,6 +5,18 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Estilos para o tema claro */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Estilos para o tema escuro */
+body.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 
 header {
     background-color: #000000;
@@ -44,29 +56,20 @@ header h1{
 #languages img{
     width: 10%;
     height: auto;
-    /* margin-top: -7vh; */
 }
 #skills-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
     text-align: center;
-    height: 25vh;
+    height: 45vh;
 }
 #skills{
     background-color: #557a7c;
     border: none;
+    height: 50vh;
     color: aliceblue;
     margin-top: 10vh;
-    }
-
-#skills h2{
     text-align: center;
-    color: #bca0ff;
-    padding-top: 5vh;
-    font-size: 3vh;
-}
-
+    }
 
 #profile-picture img{
     border-radius: 50%;
@@ -131,4 +134,28 @@ header h1{
     font-size: 2vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
+}
+#projects{
+    background-color: #ffffff;
+    border: none;
+    color: rgb(0, 0, 0);
+    margin-top: 10vh;
+    text-align: center;
+    }
+#project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+}
+#projects img{
+    width: 20vw;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+#projects img:hover {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 10px #0000003a);
 }
